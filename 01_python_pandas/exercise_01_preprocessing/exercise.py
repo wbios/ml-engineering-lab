@@ -11,11 +11,18 @@ df = pd.DataFrame({
 
 
 def preprocess(df):
+    df = df.copy()
     median_age = df["age"].median()
     df["age"] = df["age"].fillna(median_age)
     df["country"] = df["country"].fillna("UNKNOWN")
     df["purchase_log"] = np.log(df["purchase"])
-    print (df)
+    return df
 
-preprocess(df)
+result = preprocess(df)
+
+assert result["age"].isna().sum() == 0
+assert result["country"].isna().sum == 0
+assert "purchase_log" in result.columns
+
+print(result)
 
