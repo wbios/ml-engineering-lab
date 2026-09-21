@@ -105,9 +105,16 @@ The returned precisions and recalls arrays contain one more value than the thres
 
 ## Results
 
-For this dataset, the model produces the following probabilities for class 1.
+For this dataset, the model produces the following probabilities for class 1:
 
-The precision_recall_curve() funtion calculates Precision and Recall for the different thresholds derived from the predicted probabilities.
+```python
+    [0.26229162 0.27412577 0.0458456  0.05205452 0.06571015
+     0.06052429 0.05687359 0.1953024  0.05648153 0.02376987
+     0.03936874 0.2224397  0.01119792 0.01899454 0.1768594
+     0.25992288 0.01412767 0.13394752 0.04759119 0.0058086]
+```
+
+The precision_recall_curve() function calculates Precision and Recall for the different thresholds derived from the predicted probabilities.
 
 The resulting values are used to generate the Precision-Recall curve.
 
@@ -123,4 +130,4 @@ Install the dependencies:
 
 Run the exercise:
 
-    python .\02_machine_learning\exercise_09_precision_recall_curve\requirements.txt
+    python .\02_machine_learning\exercise_09_precision_recall_curve\exercise.py
